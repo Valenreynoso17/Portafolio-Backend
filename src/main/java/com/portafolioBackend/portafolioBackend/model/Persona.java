@@ -22,6 +22,9 @@ public class Persona {
     private String email;
     private String telefono;
     private String acercaDe;
+    private String linkGithub;
+    private String linkLinkedIn;
+    private String linkInstagram;
     private String fotoPerfil;
     private String fotoPortada;
 
