@@ -21,6 +21,11 @@ public class PersonaService implements IService<Persona> {
     }
 
     @Override
+    public List<Persona> getAllByIdPerson(Integer idPersona) {
+        return null;
+    }
+
+    @Override
     public Persona save(Persona entity) {
         return personaRepository.save(entity);
     }

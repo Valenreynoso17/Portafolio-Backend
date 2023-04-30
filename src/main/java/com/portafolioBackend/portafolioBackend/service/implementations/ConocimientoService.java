@@ -19,6 +19,11 @@ public class ConocimientoService implements IService<Conocimiento> {
         return conocimientoRepository.findAll();
     }
 
+    public List<Conocimiento> getAllByIdPerson(Integer idPersona) {
+        return null;
+//        return conocimientoRepository.findAllByPersonId(idPersona);
+    }
+
     @Override
     public Conocimiento save(Conocimiento entity) {
         return conocimientoRepository.save(entity);

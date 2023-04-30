@@ -18,6 +18,11 @@ public class ExperienciaService implements IService<Experiencia> {
     }
 
     @Override
+    public List<Experiencia> getAllByIdPerson(Integer idPersona) {
+        return null;
+    }
+
+    @Override
     public Experiencia save(Experiencia entity) {
         return experienciaRepository.save(entity);
     }

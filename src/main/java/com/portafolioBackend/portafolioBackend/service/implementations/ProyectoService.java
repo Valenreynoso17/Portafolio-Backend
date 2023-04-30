@@ -18,6 +18,11 @@ public class ProyectoService implements IService<Proyecto> {
     }
 
     @Override
+    public List<Proyecto> getAllByIdPerson(Integer idPersona) {
+        return null;
+    }
+
+    @Override
     public Proyecto save(Proyecto entity) {
         return proyectoRepository.save(entity);
     }

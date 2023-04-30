@@ -1,5 +1,6 @@
 package com.portafolioBackend.portafolioBackend.service.implementations;
 
+import com.portafolioBackend.portafolioBackend.model.Conocimiento;
 import com.portafolioBackend.portafolioBackend.model.Educacion;
 import com.portafolioBackend.portafolioBackend.repository.EducacionRepository;
 import com.portafolioBackend.portafolioBackend.service.IService;
@@ -15,6 +16,11 @@ public class EducacionService implements IService<Educacion> {
     @Override
     public List<Educacion> getAll() {
         return educacionRepository.findAll();
+    }
+
+    @Override
+    public List<Educacion> getAllByIdPerson(Integer idPersona) {
+        return null;
     }
 
     @Override

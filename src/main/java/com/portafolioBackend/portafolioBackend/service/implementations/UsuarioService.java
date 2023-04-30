@@ -19,6 +19,11 @@ public class UsuarioService implements IService<Usuario> {
     }
 
     @Override
+    public List<Usuario> getAllByIdPerson(Integer idPersona) {
+        return null;
+    }
+
+    @Override
     public Usuario save(Usuario entity) {
         return usuarioRepository.save(entity);
     }
