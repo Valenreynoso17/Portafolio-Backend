@@ -35,18 +35,16 @@ public class PersonaController {
         return "La persona fue eliminada correctamente";
     }
 
-    @PutMapping("/persona/editar/{id}")
+    @PutMapping("/persona/editar")
     public void editarPersona(
             @RequestHeader(value = "Authorization") String token,
-            @PathVariable Integer id,
-            @RequestParam ("nombre") String nuevoNombre,
-            @RequestParam ("apellido") String nuevoApellido,
-            @RequestParam ("edad") int nuevaEdad) {
+            @RequestBody Persona persona) {
 
         String usuarioId = jwtUtil.getKey(token);
 
-        if(usuarioId == null) {
-            // Se puede buscar en la bd si existe
+        // Se puede buscar en la bd si existe
+        if(usuarioId != null) {
+            personaService.save(persona);
         }
 
     }
