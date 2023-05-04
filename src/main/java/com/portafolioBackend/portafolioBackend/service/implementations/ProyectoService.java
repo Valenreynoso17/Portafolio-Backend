@@ -4,9 +4,11 @@ import com.portafolioBackend.portafolioBackend.model.Proyecto;
 import com.portafolioBackend.portafolioBackend.repository.ProyectoRepository;
 import com.portafolioBackend.portafolioBackend.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProyectoService implements IService<Proyecto> {
 
     @Autowired
@@ -39,6 +41,6 @@ public class ProyectoService implements IService<Proyecto> {
 
     @Override
     public Proyecto edit(Proyecto entity) {
-        return null;
+        return proyectoRepository.save(entity);
     }
 }
