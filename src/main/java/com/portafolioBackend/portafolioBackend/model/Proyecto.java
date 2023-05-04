@@ -17,4 +17,6 @@ public class Proyecto {
     private String nombre;
     private String descripcion;
     private String link;
+    @Column(name = "id_persona")
+    private int idPersona;
 }
