@@ -16,4 +16,6 @@ public class Conocimiento {
     private int id;
     private String nombre;
     private String logo;
+    @Column(name = "id_persona")
+    private int idPersona;
 }

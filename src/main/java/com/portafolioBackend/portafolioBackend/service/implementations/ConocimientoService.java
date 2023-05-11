@@ -41,6 +41,6 @@ public class ConocimientoService implements IService<Conocimiento> {
 
     @Override
     public Conocimiento edit(Conocimiento entity) {
-        return null;
+        return conocimientoRepository.save(entity);
     }
 }
