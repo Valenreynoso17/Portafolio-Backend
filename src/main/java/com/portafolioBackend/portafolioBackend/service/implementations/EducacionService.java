@@ -5,9 +5,11 @@ import com.portafolioBackend.portafolioBackend.model.Educacion;
 import com.portafolioBackend.portafolioBackend.repository.EducacionRepository;
 import com.portafolioBackend.portafolioBackend.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EducacionService implements IService<Educacion> {
 
     @Autowired
@@ -40,6 +42,6 @@ public class EducacionService implements IService<Educacion> {
 
     @Override
     public Educacion edit(Educacion entity) {
-        return null;
+        return educacionRepository.save(entity);
     }
 }

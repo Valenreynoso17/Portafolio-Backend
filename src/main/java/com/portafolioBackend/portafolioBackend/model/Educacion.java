@@ -22,4 +22,6 @@ public class Educacion {
     private LocalDate fechaFin;
     private Boolean actual;
     private String logo;
+    @Column(name = "id_persona")
+    private int idPersona;
 }
