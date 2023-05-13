@@ -22,4 +22,7 @@ public class Experiencia {
     private LocalDate fechaFin;
     private Boolean actual;
     private String logo;
+    private String periodo;
+    @Column(name = "id_persona")
+    private int idPersona;
 }

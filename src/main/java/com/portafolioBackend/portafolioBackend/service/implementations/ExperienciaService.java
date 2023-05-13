@@ -4,9 +4,11 @@ import com.portafolioBackend.portafolioBackend.model.Experiencia;
 import com.portafolioBackend.portafolioBackend.repository.ExperienciaRepository;
 import com.portafolioBackend.portafolioBackend.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ExperienciaService implements IService<Experiencia> {
 
     @Autowired
@@ -38,7 +40,5 @@ public class ExperienciaService implements IService<Experiencia> {
     }
 
     @Override
-    public Experiencia edit(Experiencia entity) {
-        return null;
-    }
+    public Experiencia edit(Experiencia entity) { return experienciaRepository.save(entity); }
 }
