@@ -20,7 +20,7 @@ public class PersonaController {
 
     @GetMapping("/")
     public Persona getPersonaPrincipal() {
-        return personaService.getById(1);
+        return personaService.getAll().stream().findFirst().orElseThrow();
     }
 
     @PostMapping("/personas/crear")
